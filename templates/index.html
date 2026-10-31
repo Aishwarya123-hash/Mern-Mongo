@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Management System</title>
+    <link rel="stylesheet" href="/public/style.css">
+</head>
+<body>
+
+    <nav>
+        <h2>Movie Management</h2>
+        <div>
+            <a href="/">Home</a>
+            <a href="/newmovie">Add Movie</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1>Movie Management System</h1>
+        <p>Manage, search and explore your favourite movies.</p>
+        <a href="/newmovie" class="btn">Add New Movie</a>
+    </header>
+
+    <main class="container">
+
+        <h2>Movie Collection</h2>
+
+        <div class="search-box">
+            <input type="text" id="searchTitle"
+                   placeholder="Search movie title">
+
+            <input type="text" id="searchGenre"
+                   placeholder="Search genre">
+
+            <button onclick="loadMovies()">Search</button>
+            <button onclick="clearSearch()">Clear</button>
+        </div>
+
+        <p id="message"></p>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Movie Title</th>
+                        <th>Genre</th>
+                        <th>Year</th>
+                        <th>Rating</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody id="movieList">
+                    <tr>
+                        <td colspan="5">Loading movies...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>Movie Management System | MERN Stack Project</p>
+    </footer>
+
+    <script src="/public/app.js"></script>
+</body>
+</html>
